@@ -12,4 +12,8 @@ class Encoder
     result << string.chr << string.length
     result.join
   end 
+
+  def string_to_list(string)
+    string.chars
+  end 
 end
