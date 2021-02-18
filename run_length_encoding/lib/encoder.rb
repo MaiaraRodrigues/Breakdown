@@ -4,13 +4,11 @@ class Encoder
   end 
 
   def get_first_letter(first)
-    first.chr
+    first[0]
   end 
 
   def get_first_letter_and_length(string)
-    result = []
-    result << string.chr << string.length
-    result.join
+    get_first_letter(string) + get_length(string).to_s
   end 
 
   def string_to_list(string)
@@ -18,7 +16,23 @@ class Encoder
   end 
 
   def is_all_as?(string)
-    string.chars.uniq.size == 1
+    # string.chars.uniq.size == 1
+    is_all_this_letter?(string, "a")
+  end 
 
+  def is_all_this_letter?(str, my_letter)
+
+    letters = string_to_list(str)
+    letters.each do |letter|
+      if letter != my_letter
+        return false 
+      end 
+    end 
+    return true
+  end 
+
+  def is_all_first_letter?(string)
+    first_letter = get_first_letter(string)
+    is_all_this_letter?(string, first_letter)
   end 
 end

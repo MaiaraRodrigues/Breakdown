@@ -75,38 +75,40 @@ RSpec.describe Encoder do
 
   # INSTRUCTION: Do a commit before uncommenting the next test.
 
-  # it "tells if the string is all a particular letter" do
-  #   encoder = Encoder.new
-  #   result_1 = encoder.is_all_this_letter?("aaa", "a")
-  #   result_2 = encoder.is_all_this_letter?("abba", "b")
-  #   expect(result_1).to eq true
-  #   expect(result_2).to eq false
-  # end
+  it "tells if the string is all a particular letter" do
+    encoder = Encoder.new
+    result_1 = encoder.is_all_this_letter?("aaa", "a")
+    result_2 = encoder.is_all_this_letter?("abba", "b")
+    result_3 = encoder.is_all_this_letter?("cccc", "c")
+    expect(result_1).to eq true
+    expect(result_2).to eq false
+    expect(result_3).to eq true
+  end
 
   # INSTRUCTION: Do a commit before uncommenting the next test.
 
-  # it "tells if the string is all its first letter" do
-  #   encoder = Encoder.new
-  #   result_1 = encoder.is_all_first_letter?("aaa")
-  #   result_2 = encoder.is_all_first_letter?("abba")
-  #   expect(result_1).to eq true
-  #   expect(result_2).to eq false
-  # end
+  it "tells if the string is all its first letter" do
+    encoder = Encoder.new
+    result_1 = encoder.is_all_first_letter?("aaa")
+    result_2 = encoder.is_all_first_letter?("abba")
+    expect(result_1).to eq true
+    expect(result_2).to eq false
+  end
 
   # INSTRUCTION: Do a commit before uncommenting the next test.
   # INSTRUCTION: Talk to your coach before moving on.
 
-  # it "gets the length of the first run of first letters" do
-  #   # This one can be a little bit tricky. You may find it useful to think about
-  #   # how you would do this on paper.
-  #   encoder = Encoder.new
-  #   result_1 = encoder.get_length_of_first_run("aaabba")
-  #   result_2 = encoder.get_length_of_first_run("abba")
-  #   result_3 = encoder.get_length_of_first_run("ccc")
-  #   expect(result_1).to eq 3
-  #   expect(result_2).to eq 1
-  #   expect(result_3).to eq 3
-  # end
+  it "gets the length of the first run of first letters" do
+    # This one can be a little bit tricky. You may find it useful to think about
+    # how you would do this on paper.
+    encoder = Encoder.new
+    result_1 = encoder.get_length_of_first_run("aaabba")
+    result_2 = encoder.get_length_of_first_run("abba")
+    result_3 = encoder.get_length_of_first_run("ccc")
+    expect(result_1).to eq 3
+    expect(result_2).to eq 1
+    expect(result_3).to eq 3
+  end
 
   # INSTRUCTION: Do a commit before uncommenting the next test.
   # INSTRUCTION: Talk to your coach before moving on.
